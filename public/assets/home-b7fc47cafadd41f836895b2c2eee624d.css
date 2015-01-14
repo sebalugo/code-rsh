@@ -1,0 +1,432 @@
+/* line 5, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.modal {
+  display: none;
+  width: 400px;
+  background: #fff;
+  padding: 15px 30px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+}
+
+/* line 22, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.modal a.close-modal {
+  position: absolute;
+  top: -12.5px;
+  right: -12.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url(close.png) no-repeat 0 0;
+}
+
+/* line 33, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.modal-spinner {
+  display: none;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -32px;
+  margin-top: -32px;
+  background: url(spinner.gif) #111111 no-repeat center center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 51, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 56, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+body {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* line 60, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.text-vertical-center2 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 66, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 72, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.btn-center {
+  margin-left: 95px;
+}
+
+/* line 78, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/* line 85, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+h1, h2, h3, h4 {
+  color: #444;
+  font-weight: 700;
+  font-size: 1.6em;
+  letter-spacing: -1px;
+}
+
+/* line 86, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+a {
+  color: #0086B3;
+  font-weight: 700;
+}
+
+/* line 87, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+a:hover {
+  color: #000;
+}
+
+/* line 88, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+p code, li code {
+  background: #ffffcc;
+  color: #444;
+}
+
+/* line 89, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+pre {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* line 90, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+pre code {
+  overflow: scroll;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/* line 91, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+hr {
+  height: 10px;
+  background: #eee;
+  border: none;
+}
+
+/* line 92, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 93, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+td {
+  border: 1px solid #eee;
+  padding: 15px;
+}
+
+/* line 94, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+td pre {
+  margin: 0;
+}
+
+/* Example 2 (login form) */
+/* line 97, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form.modal {
+  border-radius: 0;
+  line-height: 18px;
+  padding: 0;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+}
+
+/* line 104, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form h3 {
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  background: -moz-linear-gradient(top, #2e5764, #1e3d47);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1e3d47), color-stop(1, #2e5764));
+}
+
+/* line 113, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form.modal p {
+  padding: 20px 30px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, white));
+  overflow: hidden;
+}
+
+/* line 117, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form.modal p:last-child {
+  border: none;
+}
+
+/* line 118, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form.modal p label {
+  float: left;
+  font-weight: bold;
+  color: #333;
+  font-size: 13px;
+  width: 110px;
+  line-height: 22px;
+}
+
+/* line 120, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.login_form.modal p input[type="text"],
+.login_form.modal p input[type="password"] {
+  font: normal 12px/18px "Lucida Grande", Verdana;
+  padding: 3px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+/* line 128, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.part {
+  display: none;
+}
+
+/* Custom Button Styles */
+/* line 134, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.btn-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 142, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* line 147, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.btn-light {
+  border-radius: 0;
+  color: #333;
+  background-color: white;
+}
+
+/* line 155, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Horizontal Rule */
+/* line 162, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+hr.small {
+  max-width: 100px;
+}
+
+/* Side Menu */
+/* line 168, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: #222;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* line 184, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 193, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 198, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+
+/* line 204, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 211, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* line 215, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+
+/* line 221, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+
+/* line 225, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 230, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+#menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* line 237, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* line 247, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.toggle {
+  margin: 5px 5px 0 0;
+}
+
+/* Header */
+/* line 253, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* About */
+/* line 266, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.about {
+  padding: 50px 0;
+}
+
+/* Services */
+/* line 272, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.services {
+  padding: 50px 0;
+}
+
+/* line 276, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.service-item {
+  margin-bottom: 30px;
+}
+
+/* Callout */
+/* line 282, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.callout {
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  background: url(../img/callout.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* Portfolio */
+/* line 296, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.portfolio {
+  padding: 50px 0;
+}
+
+/* line 300, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/* line 304, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.img-portfolio {
+  margin: 0 auto;
+}
+
+/* line 308, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.img-portfolio:hover {
+  opacity: 0.8;
+}
+
+/* Call to Action */
+/* line 314, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.call-to-action {
+  padding: 50px 0;
+}
+
+/* line 318, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.call-to-action .btn {
+  margin: 10px;
+}
+
+/* Map */
+/* line 324, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+.map {
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  /* line 329, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+  .map {
+    height: 75%;
+  }
+}
+/* Footer */
+/* line 336, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/home.css.scss */
+footer {
+  padding: 100px 0;
+}
