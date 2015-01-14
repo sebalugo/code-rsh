@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require jquery.vide
 //= require ace/ace
 //= require ace/worker-html
-//= require jquery.turbolinks
+
 //= require jquery.modal.min
 
