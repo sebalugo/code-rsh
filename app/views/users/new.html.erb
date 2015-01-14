@@ -1,0 +1,58 @@
+ 
+ <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+  </style>
+
+
+
+<div class="container">
+
+        <div class="row">
+           <div style="text-align: center;width: 350px; margin: auto" class="well" >
+
+			<fieldset>
+
+			<legend>Registration</legend>
+
+			<%= form_for @user  do |f| %>
+			  <% if @user.errors.any? %>
+			    <div class="error_messages">
+			      <h2>Form is invalid</h2>
+			      <ul>
+			        <% for message in @user.errors.full_messages %>
+			          <li><%= message %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+			  <p>
+			    <%= f.label :username %><br />
+			    <%= f.text_field :username , class: "form-control"%>
+			  </p>
+			  <p>
+			    <%= f.label :email %><br />
+			    <%= f.text_field :email , class: "form-control"%>
+			  </p>
+			  <p>
+			    <%= f.label :password %><br />
+			    <%= f.password_field :password , class: "form-control"%>
+			  </p>
+			  <p>
+			    <%= f.label :password_confirmation %><br />
+			    <%= f.password_field :password_confirmation , class: "form-control"%>
+			  </p>
+			 <input type="submit" class="btn btn-primary"></input>
+			<% end %>
+
+			</fieldset>
+
+		</div>
+        </div>
+    
+
+
+</div>
+
+

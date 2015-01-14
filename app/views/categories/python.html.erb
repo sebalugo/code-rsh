@@ -1,0 +1,82 @@
+<script type="text/javascript" src="../assets/TimeCircles.js"></script>
+<script type="text/javascript" src="../assets/python.js"></script>
+<link href="../assets/TimeCircles.css" rel="stylesheet">
+
+<div class="container">
+
+<div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 style="color:blue">PYTHON</h1>
+            </div>
+</div>
+
+<audio id="correct_audio" src="../assets/correct.mp3"></audio>
+<audio id="wrong_audio" src="../assets/wrong.mp3"></audio>
+
+<center><div class="example" style="width:20%;"></div></center>
+
+<div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 style="text-align:right;display:inline">Score:</h3>  <h3 style="text-align:right;display:inline" id="score_count">0</h3>
+            </div>
+</div>
+	
+		<div >
+
+		<pre id="editor" style="height:300px;">
+class Accounts:
+    
+    acclist = { }
+
+    def __init__(self, firstname, initbal):
+        if initbal < 0:
+            raise ValueError, 'Overdraft on ' + firstname
+        self.acclist[firstname] = initbal
+
+    def newacct(self, acctname):
+        "Create a new account."
+        if self.acclist.has_key(acctname):
+            raise KeyError, 'Account name ' + acctname + ' already exists.'
+        self.acclist[acctname] = 0
+
+    def transfer(self, fr, to, amt):
+        if amt < 0:
+            self.transfer(to, fr, -amt)
+        else:
+            if self.acclist[fr] < amt:
+                raise ValueError, 'Overdraft on ' + fr
+            else:
+                self.acclist[fr] = self.acclist[fr] - amt
+                self.acclist[to] = self.acclist[to] + amt
+
+    def close(self, acctname, receiver = None):
+        "Close an account."
+
+        if receiver:
+            self.transfer(acctname, receiver, self.acclist[acctname])
+
+        if self.acclist[acctname]:
+            raise ValueError, 'Close of non-empty ' + acctname
+
+        del self.acclist[acctname]
+
+    def value(self, acctname):
+        "Return the value an account."
+        return self.acclist[acctname]
+
+    def list(self):
+        "Get a list of account names."
+        return self.acclist.keys()
+		</pre>
+
+		</div>
+
+<div class="form-group" id="status">
+      <label class="control-label" for="inputError">Type here: </label>
+      <div class="controls">
+        <input type="text" class="form-control" id="actual_code" autofocus>
+      </div>
+</div>
+
+
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <%= stylesheet_link_tag "application", params[:controller], :media => "all" %>
+    <%= javascript_include_tag "application", params[:controller] %>
+
+    <title>Welcome</title>
+
+
+
+</head>
+
+
+
+<body style="background-image: url('assets/bg_key.jpg');">
+      <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center" >
+            <h2 style="color:orange;display: inline;"><strong>code</h2></strong><h2 style="color:green;display: inline;"><strong>rush</strong></h2>
+            <br><br>
+            <h1 >Type faster </h1>
+            <br>
+            <br>
+            <%= link_to "Get Started" , new_user_path , { :class=>"btn btn-dark btn-lg" , :style=>"width:150px;" } %>
+            <br>
+            <br>
+            <br>
+            <h1 > Code faster</h1>
+            <br>
+            <br>
+            <h3> ...for free </h3>
+        </div>
+    </header>
+
+
+</body>
+
+</html>
