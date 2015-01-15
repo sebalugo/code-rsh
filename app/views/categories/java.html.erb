@@ -1,6 +1,7 @@
-<script type="text/javascript" src="../assets/TimeCircles.js"></script>
-<script type="text/javascript" src="../assets/java.js"></script>
-<link href="../assets/TimeCircles.css" rel="stylesheet">
+<%= javascript_include_tag "TimeCircles.js" %>
+<%= javascript_include_tag "java.js" %>
+<%= stylesheet_link_tag "TimeCircles.css" %>
+
 
 <div class="container">
 
@@ -10,8 +11,8 @@
             </div>
 </div>
 
-<audio id="correct_audio" src="../assets/correct.mp3"></audio>
-<audio id="wrong_audio" src="../assets/wrong.mp3"></audio>
+<audio id="correct_audio" src="<%= asset_path ('correct.mp3') %>"></audio>
+<audio id="wrong_audio" src="<%= asset_path ('wrong.mp3') %>"></audio>
 
 <center><div class="example" style="width:20%;"></div></center>
 

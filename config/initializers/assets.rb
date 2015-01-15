@@ -5,7 +5,10 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( TimeCircles.js )
+Rails.application.config.assets.precompile += %w( javascript.js )
+Rails.application.config.assets.precompile += %w( TimeCircles.css )
+Rails.application.config.assets.precompile += %w( leaderboard.js )
 %w(users home sessions categories courses).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
 end
