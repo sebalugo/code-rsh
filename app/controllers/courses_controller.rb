@@ -30,15 +30,15 @@ class CoursesController < ApplicationController
   end
 
   def java_courses
-    @category = Category.find_by_name("ruby")
+    @category = Category.find_by_name("java")
   end
 
   def js_courses
-    @category = Category.find_by_name("ruby")
+    @category = Category.find_by_name("js")
   end
 
   def python_courses
-    @category = Category.find_by_name("ruby")
+    @category = Category.find_by_name("python")
   end
 
 end
