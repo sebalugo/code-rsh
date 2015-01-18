@@ -10,6 +10,15 @@ Rails.application.routes.draw do
   get 'practice/javascript' => 'categories#javascript' , :as => 'javascript'
   get 'practice/python' => 'categories#python' , :as => 'python'
   get 'results' => 'courses#results' , :as =>'results'
+  get 'ruby_courses' => 'courses#ruby_courses' , :as => 'ruby_courses'
+  get 'java_courses' => 'courses#java_courses' , :as => 'java_courses'
+  get 'js_courses' => 'courses#js_courses' , :as => 'js_courses'
+  get 'python_courses' => 'courses#python_courses' , :as => 'python_courses'
+
+  get 'ruby_lobby' => 'categories#ruby_lobby' , :as => 'ruby_lobby'
+  get 'js_lobby' => 'categories#js_lobby' , :as => 'js_lobby'
+  get 'java_lobby' => 'categories#java_lobby' , :as => 'java_lobby'
+  get 'python_lobby' => 'categories#python_lobby' , :as => 'python_lobby'
 
   root 'home#welcome'
   post 'users/new' => 'users#aa'

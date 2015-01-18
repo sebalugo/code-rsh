@@ -19,8 +19,26 @@ class CoursesController < ApplicationController
     act_score.save
   	user.save
     category.save
+  end
 
+  def index
+    @category = Category.find_by_name(params[:category])
+  end
 
+  def ruby_courses
+    @category = Category.find_by_name("ruby")
+  end
+
+  def java_courses
+    @category = Category.find_by_name("ruby")
+  end
+
+  def js_courses
+    @category = Category.find_by_name("ruby")
+  end
+
+  def python_courses
+    @category = Category.find_by_name("ruby")
   end
 
 end

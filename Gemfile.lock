@@ -71,6 +71,7 @@ GEM
     foreman (0.77.0)
       dotenv (~> 1.0.2)
       thor (~> 0.19.1)
+    hashie (3.3.2)
     hike (1.2.3)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
@@ -167,6 +168,7 @@ DEPENDENCIES
   faye
   foreigner
   foreman
+  hashie
   immigrant
   jbuilder (~> 2.0)
   jquery-rails

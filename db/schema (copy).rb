@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118202115) do
+ActiveRecord::Schema.define(version: 20150115222003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.integer  "difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "category_id"
-    t.text     "description"
   end
 
   create_table "matches", force: true do |t|
@@ -45,9 +43,6 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.string   "winner"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "course_id"
-    t.integer  "user_id"
-    t.string   "key"
   end
 
   create_table "scores", force: true do |t|
@@ -56,7 +51,8 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.string   "grade"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "course_id"
+    t.integer  "user_id"
+    t.integer  "category_id"
   end
 
   create_table "users", force: true do |t|
@@ -66,7 +62,6 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "match_id"
   end
 
 end

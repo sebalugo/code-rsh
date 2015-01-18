@@ -9,6 +9,10 @@ Rails.application.config.assets.precompile += %w( TimeCircles.js )
 Rails.application.config.assets.precompile += %w( javascript.js )
 Rails.application.config.assets.precompile += %w( TimeCircles.css )
 Rails.application.config.assets.precompile += %w( leaderboard.js )
+Rails.application.config.assets.precompile += %w( ruby_lobby.js )
+Rails.application.config.assets.precompile += %w( java_lobby.js )
+Rails.application.config.assets.precompile += %w( js_lobby.js )
+Rails.application.config.assets.precompile += %w( python_lobby.js )
 %w(users home sessions categories courses).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
 end

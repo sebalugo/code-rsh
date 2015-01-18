@@ -1,0 +1,35 @@
+<div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Choose your Javascript course!</h1>
+            </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+
+<% @category.courses.each do |course| %>
+	
+	<div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="box">
+                <div class="icon">
+                    <div class="image"> <img src="<%= image_path ('python-logo.png') %>" width="50px" height="50px"><img> </div>
+                    <div class="info">
+                        <h3 class="title" style="color:blue">Python</h3>
+                        <p>
+                            <%= course.description %>
+                        </p>
+                        <div class="more">
+                            <a href="/python_courses?id=<%= course.id %>"  class="btn btn-primary my-btn">Practice<i class="fa fa-plus"></i> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+
+<% end %>
+
+    </div>
+</div>
