@@ -1,0 +1,163 @@
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+/* line 10, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.time_circles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+/* line 20, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.time_circles > div {
+  position: absolute;
+  text-align: center;
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+/* line 28, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.time_circles > div > h4 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Century Gothic', Arial;
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+/* line 39, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.time_circles > div > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Century Gothic', Arial;
+  font-size: 300%;
+  margin-top: 0.4em;
+  font-weight: bold;
+}
+
+/* line 49, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.white {
+  color: white;
+}
+
+/* line 53, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.btn-java:focus, .btn-java:active, .btn-java.active, .open .dropdown-toggle.btn-java {
+  background-color: #A6A8C1;
+  border-color: #31347B;
+}
+
+/* line 60, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.btn-java {
+  background-color: #9F418F;
+  border-color: #9F418F;
+}
+
+/* line 65, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.btn-lg {
+  font-size: 38px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+/* line 71, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon {
+  text-align: center;
+  position: relative;
+}
+
+/* line 76, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .image {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  width: 88px;
+  height: 88px;
+  border: 7px solid white;
+  line-height: 88px;
+  border-radius: 50%;
+  background: #63B76C;
+  vertical-align: middle;
+}
+
+/* line 89, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("images/page-loader.gif") 50% 50% no-repeat #f9f9f9;
+}
+
+/* line 99, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon:hover > .image {
+  border: 4px solid black;
+}
+
+/* line 103, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .image > i {
+  font-size: 40px !important;
+  color: #fff !important;
+}
+
+/* line 108, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon:hover > .image > i {
+  color: white !important;
+}
+
+/* line 112, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .info {
+  margin-top: -24px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid #e0e0e0;
+  padding: 15px 0 10px 0;
+}
+
+/* line 119, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .info > h3.title {
+  color: #222;
+  font-weight: 500;
+}
+
+/* line 124, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .info > p {
+  color: #666;
+  line-height: 1.5em;
+  margin: 20px;
+}
+
+/* line 130, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
+  color: #222;
+}
+
+/* line 134, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon > .info > .more a {
+  color: #222;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 141, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box > .icon:hover > .info > .more > a {
+  color: #000;
+  padding: 6px 8px;
+  border-bottom: 4px solid black;
+}
+
+/* line 147, /home/sebalugo/Desktop/Ruby/hts/ruby-getting-started/app/assets/stylesheets/categories.css.scss */
+.box .space {
+  height: 30px;
+}
