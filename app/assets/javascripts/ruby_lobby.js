@@ -1,6 +1,6 @@
 $(function(){
 
-	var faye = new Faye.Client('ancient-lowlands-4557.herokuapp.com/faye');
+	var faye = new Faye.Client('http://ancient-lowlands-4557.herokuapp.com/faye');
 	
 	var subs = faye.subscribe("/lobby/ruby" , function(data){
 		var message = data["message"].content;
