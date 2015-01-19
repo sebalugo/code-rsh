@@ -111,6 +111,10 @@ $( document ).ready(function() {
           $("#firstPlace").attr("user",user);
           $("#firstPlace").text(user + " "+score+" pts");
           $("#firstPlace").attr("finished",1);
+
+          $("#firstPlace").css("font-weight","Bold");
+          $("#firstPlace").css("color","green");
+
           $("#firstPlace").attr("time",time);
           $("#firstPlace").attr("mistakes",mistakes);
         }
@@ -119,6 +123,10 @@ $( document ).ready(function() {
           $("#secondPlace").attr("user",user);
           $("#secondPlace").text(user + " "+score+" pts");
           $("#secondPlace").attr("finished",1);
+
+          $("#secondPlace").css("font-weight","Bold");
+          $("#secondPlace").css("color","green");
+
           $("#secondPlace").attr("time",time);
           $("#secondPlace").attr("mistakes",mistakes);
         }
@@ -127,6 +135,10 @@ $( document ).ready(function() {
           $("#secondPlace").attr("user",user);
           $("#secondPlace").text(user + " "+score+" pts");
           $("#secondPlace").attr("finished",1);
+
+          $("#secondPlace").css("font-weight","Bold");
+          $("#secondPlace").css("color","green");
+
           $("#secondPlace").attr("time",time);
           $("#secondPlace").attr("mistakes",mistakes);
         }
@@ -135,6 +147,10 @@ $( document ).ready(function() {
           $("#firstPlace").attr("user",user);
           $("#firstPlace").text(user + " "+score+" pts");
           $("#firstPlace").attr("finished",1);
+
+          $("#firstPlace").css("font-weight","Bold");
+          $("#firstPlace").css("color","green");
+
           $("#firstPlace").attr("time",time);
           $("#firstPlace").attr("mistakes",mistakes);
         }
