@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
   	@score = params[:score]
   	@time = params[:time]
   	@category = params[:category]
-    @course = params[:course]
+    @course = Category.find_by_name(@category).courses.find(params[:course].to_i)
   	@mistakes = params[:mistakes]
   	@typed = params[:typed]
 
@@ -21,6 +21,8 @@ class CoursesController < ApplicationController
   	user = User.find(session[:user_id])
     category = Category.find_by_name(@category)
     course = category.courses.find_by_id(params[:course])
+
+
 
   	act_score = Score.new(:points => @final_score,:time => @time , :wpm => @wpm)
 

@@ -31,10 +31,13 @@ $( document ).ready(function() {
 
   var subs = faye.subscribe("/multiplayer/"+$("#key").val() , function(data){
       
-      var time = Math.abs( $(".example").TimeCircles().getTime().toFixed() );
+      
       var score = data.score;
       var user = data.user;
       var tp = data.actionT;
+      var time = Math.abs( $(".example").TimeCircles().getTime().toFixed() );
+      if( $("#firstPlace").attr("ready" ) != 1 || $("#secondPlace").attr("ready") != 1 )
+          $(".example").TimeCircles().stop();
 
       if(tp == "ready"){
         
@@ -58,11 +61,10 @@ $( document ).ready(function() {
           } 
         }
 
-        if(  $("#firstPlace").attr("ready") == "1" &&  $("#secondPlace").attr("ready") ){
+      if(  $("#firstPlace").attr("ready") == 1 &&  $("#secondPlace").attr("ready") == 1 ){
           $(".loader").hide();
-          $(".example").TimeCircles();
+          $(".example").TimeCircles().start();
         }
-
       }
       else if(tp == "act"){
 

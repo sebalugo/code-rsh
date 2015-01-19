@@ -1,5 +1,5 @@
 <%= javascript_include_tag "TimeCircles.js" %>
-<%= javascript_include_tag "python.js" %>
+<%= javascript_include_tag "java.js" %>
 <%= stylesheet_link_tag "TimeCircles.css" %>
 
 
@@ -9,7 +9,7 @@
 
 <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 style="color:blue"><%= @course.name %> </h1>
+                <h1 style="color:purple"><%= @course.name %> </h1>
             </div>
 </div>
 
@@ -26,8 +26,7 @@
 	
 		<div >
 
-		<pre id="editor" style="height:300px;">
-        <%= @course.code %>
+		<pre id="editor" style="height:300px;"><%= @course.code %>
 		</pre>
 
 		</div>

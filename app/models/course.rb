@@ -7,7 +7,7 @@ class Course < ActiveRecord::Base
 	accepts_nested_attributes_for :matches
 
 	def self.getGrade( mistakes,time,score )
-		finalScore = (score-(time * 0.25) ) - (mistakes * 3)
+		finalScore = (score-(time * 0.25) ) 
 	end
 
 	def self.getWpm( typed,time)

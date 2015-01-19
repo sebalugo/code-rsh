@@ -25,7 +25,7 @@
 			<tr>
 				<td><%= i+1 %></td>
 				<td style="color:purple">Java</td>
-				<td><%= act.user.username %></td>
+				<td><a href="/profile?name=<%= act.user.username %>"><%= act.user.username %></a></td>
 				<td><%= act.points %></td>
 				<td><%= act.time %></td>
 				<td><%= act.created_at.in_time_zone("America/Santo_Domingo").strftime(" %d/%m/%Y %I:%M%p") %></td>

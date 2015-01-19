@@ -8,7 +8,7 @@ var pastWpms = [];
 var sWp =  $("#pastWpms").val().split(" ");
 
 for( i = 0 ; i < $("#coursesCompleted").val() ; i++){
-	amount.push(i+1);
+	amount.push("WPM");
 	pastWpms.push(sWp[i]);
 }
 

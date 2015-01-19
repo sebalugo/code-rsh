@@ -35,6 +35,9 @@ class User < ActiveRecord::Base
 	def self.getWpm(name)
 		user = find_by_username(name)
 		cnt = user.scores.length
+		if cnt == 0
+			cnt = 1.0
+		end
 		sum = 0
 		user.scores.each{|x| sum = sum+x.wpm}
 		(sum*1.0/cnt*1.0).round()
@@ -43,6 +46,9 @@ class User < ActiveRecord::Base
 	def self.getWl(name)
 		user = find_by_username(name)
 		cnt = user.matches.length
+		if cnt == 0
+			cnt = 1
+		end
 		sum = user.matches.select{|x| x.winner == user.username}.length
 		(sum*1.0 / cnt*1.0 ) * 100.0
 	end

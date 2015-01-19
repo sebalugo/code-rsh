@@ -5,28 +5,37 @@
             </div>
 </div>
 
-
-
 <div class="container" >
 
-<h2 style="color:gold">Javascript</h2>
+<div class="panel panel-default" style="width:100%;margin:0 auto">
 	
-	<div style="margin-left:50px">
+
+	<div class="panel-heading">
+		<h1 class="panel-title" style="color:gold">Javascript</h1>
+	</div>
 	
-	<h4> Courses: </h4>
-	<ul>
-		<% @js.each do |course| %>
-			<li><a href="/leaderboards/js?id=<%=course.id%>"><%=course.name%></a></li>
-		<% end %>
-	</ul>
+		
+		<div style="margin-left:50px">
+		
+		<h4> Courses: </h4>
+		<ul>
+			<% @js.each do |course| %>
+				<li><a href="/leaderboards/js?id=<%=course.id%>"><%=course.name%></a></li>
+			<% end %>
+		</ul>
+
+		</div>
 
 	</div>
-
 </div>
 
 <div class="container" >
+<div class="panel panel-default" style="width:100%;margin:0 auto">
 
-<h2 style="color:red">Ruby</h2>
+	<div class="panel-heading">
+		<h1 class="panel-title" style="color:red">Ruby</h1>
+	</div>
+
 
 	<div style="margin-left:50px">
 
@@ -40,10 +49,14 @@
 	</div>
 
 </div>
+</div>
 
 <div class="container" >
+<div class="panel panel-default" style="width:100%;margin:0 auto">
 
-<h2 style="color:blue">Python</h2>
+	<div class="panel-heading">
+		<h1 class="panel-title" style="color:blue">Python</h1>
+	</div>
 	
 	<div style="margin-left:50px">
 
@@ -57,11 +70,14 @@
 	</div>
 
 </div>
+</div>
 
 <div class="container" >
+<div class="panel panel-default" style="width:100%;margin:0 auto">
+<div class="panel-heading">
+		<h1 class="panel-title" style="color:purple">Java</h1>
+</div>
 
-<h2 style="color:purple">Java</h2>
-	
 	<div style="margin-left:50px">
 
 				<h4> Courses: </h4>
@@ -73,4 +89,5 @@
 
 	</div>
 
+</div>
 </div>
