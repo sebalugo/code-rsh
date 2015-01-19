@@ -18,4 +18,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password , :password_confirmation)
   end
 
+  def profile
+    @user = User.find_by_username(params[:name])
+    @wpm = User.getWpm(params[:name])
+    @coursesCompleted = @user.scores.length
+  end
+
 end

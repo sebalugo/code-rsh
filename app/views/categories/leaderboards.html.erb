@@ -9,129 +9,68 @@
 
 <div class="container" >
 
-<h2>Javascript</h2>
-
-	<table class="table">
-		<tr>
-			<th class="col-sm-1">Position</th>
-			<th class="col-sm-2">Course</th>
-			<th class="col-sm-2">User</th>
-			<th class="col-sm-2">Points</th>
-			<th class="col-sm-2">Time</th>
-			<th class="col-sm-2">Date</th>
-		</tr>
-
-		<% @js.each_with_index do |act,i| %>
-		
-		
-		<tr >
-			<td><%= i+1 %></td>
-			<td style="color:gold">Javascript</td>
-			<td><%= act.user.username %></td>
-			<td><%= act.points %></td>
-			<td><%= act.time %></td>
-			<td><%= act.created_at.in_time_zone("America/Santo_Domingo").strftime(" %d/%m/%Y %I:%M%p") %></td>
-		</tr>
-
-		<% end %>
-
-	</table>
-
-</div>
-
-<div class="container" >
-
-<h2>Ruby</h2>
-
-	<table class="table">
-		<tr>
-			<th class="col-sm-1">Position</th>
-			<th class="col-sm-2">Course</th>
-			<th class="col-sm-2">User</th>
-			<th class="col-sm-2">Points</th>
-			<th class="col-sm-2">Time</th>
-			<th class="col-sm-2">Date</th>
-		</tr>
-
-		<% @ruby.each_with_index do |act,i| %>
-
-		<tr>
-			<td><%= i+1 %></td>
-			<td style="color:red">Ruby</td>
-			<td><%= act.user.username %></td>
-			<td><%= act.points %></td>
-			<td><%= act.time %></td>
-			<td><%= act.created_at.in_time_zone("America/Santo_Domingo").strftime(" %d/%m/%Y %I:%M%p") %></td>
-		</tr>
-
-		<% end %>
-
-	</table>
-
-</div>
-
-<div class="container" >
-
-<h2>Python</h2>
-
-	<table class="table">
-		<tr>
-			<th class="col-sm-1">Position</th>
-			<th class="col-sm-2">Course</th>
-			<th class="col-sm-2">User</th>
-			<th class="col-sm-2">Points</th>
-			<th class="col-sm-2">Time</th>
-			<th class="col-sm-2">Date</th>
-		</tr>
-
-		<% @python.each_with_index do |act,i| %>
-		
+<h2 style="color:gold">Javascript</h2>
 	
-		
-		<tr >
-			<td><%= i+1 %></td>
-			<td style="color:blue">Python</td>
-			<td><%= act.user.username %></td>
-			<td><%= act.points %></td>
-			<td><%= act.time %></td>
-			<td><%= act.created_at.in_time_zone("America/Santo_Domingo").strftime(" %d/%m/%Y %I:%M%p") %></td>
-		</tr>
-
+	<div style="margin-left:50px">
+	
+	<h4> Courses: </h4>
+	<ul>
+		<% @js.each do |course| %>
+			<li><a href="/leaderboards/js?id=<%=course.id%>"><%=course.name%></a></li>
 		<% end %>
+	</ul>
 
-	</table>
+	</div>
 
 </div>
 
 <div class="container" >
 
-<h2>Java</h2>
+<h2 style="color:red">Ruby</h2>
 
-	<table class="table">
-		<tr>
-			<th class="col-sm-1">Position</th>
-			<th class="col-sm-2">Course</th>
-			<th class="col-sm-2">User</th>
-			<th class="col-sm-2">Points</th>
-			<th class="col-sm-2">Time</th>
-			<th class="col-sm-2">Date</th>
-		</tr>
+	<div style="margin-left:50px">
 
-		<% @java.each_with_index do |act,i| %>
-		
-		
-		
-		<tr >
-			<td><%= i+1 %> </td>
-			<td style="color:purple">Java</td>
-			<td><%= act.user.username %></td>
-			<td><%= act.points %></td>
-			<td><%= act.time %></td>
-			<td><%= act.created_at.in_time_zone("America/Santo_Domingo").strftime(" %d/%m/%Y %I:%M%p")  %></td>
-		</tr>
-
+		<h4> Courses: </h4>
+	<ul>
+		<% @ruby.each do |course| %>
+			<li><a href="/leaderboards/ruby?id=<%=course.id%>"><%=course.name%></a></li>
 		<% end %>
+	</ul>
 
-	</table>
+	</div>
+
+</div>
+
+<div class="container" >
+
+<h2 style="color:blue">Python</h2>
+	
+	<div style="margin-left:50px">
+
+		<h4> Courses: </h4>
+	<ul>
+		<% @python.each do |course| %>
+			<li><a href="/leaderboards/python?id=<%=course.id%>"><%=course.name%></a></li>
+		<% end %>
+	</ul>
+
+	</div>
+
+</div>
+
+<div class="container" >
+
+<h2 style="color:purple">Java</h2>
+	
+	<div style="margin-left:50px">
+
+				<h4> Courses: </h4>
+	<ul>
+		<% @java.each do |course| %>
+			<li><a href="/leaderboards/java?id=<%=course.id%>"><%=course.name%></a></li>
+		<% end %>
+	</ul>
+
+	</div>
 
 </div>

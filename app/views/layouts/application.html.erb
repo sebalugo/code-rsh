@@ -51,7 +51,7 @@
 
                             <%if current_user %> 
 
-                            <li><a href="/profile"><i class="icon-lock"></i>Profile</a></li>
+                            <li><a href="/profile?name=<%= current_user.username %>"><i class="icon-lock"></i>Profile</a></li>
 
                 <%end%>
                 </ul>

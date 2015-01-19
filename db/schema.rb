@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118202115) do
+ActiveRecord::Schema.define(version: 20150119144418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievements", force: true do |t|
+    t.text     "description"
+    t.string   "logo_url"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "achievements", ["user_id"], name: "index_achievements_on_user_id", using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -50,6 +60,9 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.string   "key"
   end
 
+  create_table "matches_users", force: true do |t|
+  end
+
   create_table "scores", force: true do |t|
     t.integer  "points"
     t.integer  "time"
@@ -57,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "course_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
@@ -67,6 +81,7 @@ ActiveRecord::Schema.define(version: 20150118202115) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "match_id"
+    t.string   "profile_image"
   end
 
 end

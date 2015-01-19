@@ -63,7 +63,7 @@ $( document ).ready(function() {
       }
    		if(line_number == last_line){
           var time = Math.abs( $(".example").TimeCircles().getTime() );
-          window.location = "/results?category=javascript&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters;
+          window.location = "/results?category=javascript&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters+"&course="+$("#courseId").val();
       }
 
 	});

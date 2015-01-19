@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :scores
+	has_many :achievements
 	has_and_belongs_to_many :matches
 
 	accepts_nested_attributes_for :scores
@@ -30,4 +31,13 @@ class User < ActiveRecord::Base
 			self.password_hash = BCrypt::Engine.hash_secret(password , password_salt)
 		end
 	end
+
+	def self.getWpm(name)
+		user = find_by_username(name)
+		cnt = user.scores.length
+		sum = 0
+		user.scores.each{|x| sum = sum+x.points}
+		sum/cnt
+	end
+
 end

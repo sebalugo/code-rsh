@@ -1,10 +1,10 @@
 $( document ).ready(function() {
   
   $(".example").TimeCircles();
-
+  
   var editor = ace.edit("editor");
     editor.setTheme("ace/theme/github");
-    editor.getSession().setMode("ace/mode/java");
+    editor.getSession().setMode("ace/mode/python");
     editor.setFontSize(18);
 
     var line_number = 1;
@@ -63,7 +63,7 @@ $( document ).ready(function() {
       }
       if(line_number == last_line){
           var time = Math.abs( $(".example").TimeCircles().getTime() );
-          window.location = "/results?category=java&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters+"&course="+$("#courseId").val();
+          window.location = "/results?category=ruby&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters;
       }
 
   });

@@ -1,0 +1,69 @@
+<%= javascript_include_tag "TimeCircles.js" %>
+<%= javascript_include_tag "http://localhost:3000/faye.js" %>
+<%= javascript_include_tag "multiplayer_match.js" %>
+<%= stylesheet_link_tag "TimeCircles.css" %>
+
+<input type="text" id="category" value="<%= @course.category.name %>" hidden></input>
+<input type="text" id="course" value="<%= @course.id %>" hidden></input>
+<input type="text" id="username" value="<%= current_user.username %>" hidden></input>
+<input type="text" id="key" value="<%= @key %>" hidden></input>
+
+<div class="container">
+
+<div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 style=""><%= @course.name %></h1>
+            </div>
+</div>
+
+<audio id="correct_audio" src="<%= asset_path ('correct.mp3') %>"></audio>
+<audio id="wrong_audio" src="<%= asset_path ('wrong.mp3') %>"></audio>
+
+<center><div class="example" style="width:20%;"></div></center>
+
+<div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 style="text-align:right;display:inline">Score:</h3>  <h3 style="text-align:right;display:inline" id="score_count">0</h3>
+            </div>
+</div>
+	
+		
+		<div style="margin-left:50px;float:right">
+			<h3>Standings</h3>
+			<ol> 
+				<li id="firstPlace" score=0 user="" finished=0 own=0 mistakes="" time=""></li>
+				<li id="secondPlace" score=0 user="" finished=0 own=0 mistakes="" time=""></li>
+			</ol>
+		</div>
+
+		<div >
+			<pre id="editor" style="height:300px;margin-top:20px">class UnionFind
+			</pre>
+		</div>
+
+<div class="form-group" id="status">
+      <label class="control-label" for="inputError">Type here: </label>
+      <div class="controls">
+        <input type="text" class="form-control" id="actual_code" disabled>
+        <button type="button" class="btn btn-primary my-btn" style="display:inline" id="ready_button">Click when you're ready!</button>
+      </div>
+</div>
+
+
+</div>
+
+<style>
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: url(<%= image_path ('page-loader.gif') %>) 50% 50% no-repeat rgb(249,249,249);
+}
+</style>
+
+<div class="loader" hidden></div>
+
+

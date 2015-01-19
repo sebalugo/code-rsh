@@ -14,6 +14,5 @@ class Course < ActiveRecord::Base
 		wpm = (typed/5)/(time/60)
 		wpm.round(3)
 	end
-
-
+	
 end

@@ -1,6 +1,6 @@
 <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Results for:</h1><h4><%= @category %> course</h4>
+                <h1>Results for:</h1><h4><%= @category %> <%= @course%> </h4>
             </div>
 </div>
 
@@ -25,4 +25,19 @@
             <div class="col-lg-12 text-center">
                 <h1>Final Score: </h1><h4><%= @final_score %> points <%= @wpm %> wpm</h4>
             </div>
+</div>
+
+<div class = "row">
+	<div class="col-lg-12 text-center ">
+
+		<% if @final_score2 > 0 %>
+		<%if @final_score2 > @final_score %>
+			<h2>Winner: <span style="color:blue"><%= @user2 %></span> <%= @final_score2%> pts!</h2>
+		<% end %>
+		<%if @final_score2 < @final_score %>
+			<h2>Winner: <span style="color:blue"><%= current_user.username %></span> <%= @final_score%> pts!</h2>
+		<% end %>
+		<% end %>
+		
+	</div>
 </div>

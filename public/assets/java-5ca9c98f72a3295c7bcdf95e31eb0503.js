@@ -63,7 +63,7 @@ $( document ).ready(function() {
       }
       if(line_number == last_line){
           var time = Math.abs( $(".example").TimeCircles().getTime() );
-          window.location = "/results?category=java&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters+"&course="+$("#courseId").val();
+          window.location = "/results?category=java&score="+score+"&time="+time+"&mistakes="+mistakes+"&typed="+typed_characters;
       }
 
   });

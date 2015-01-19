@@ -13,6 +13,17 @@ Rails.application.config.assets.precompile += %w( ruby_lobby.js )
 Rails.application.config.assets.precompile += %w( java_lobby.js )
 Rails.application.config.assets.precompile += %w( js_lobby.js )
 Rails.application.config.assets.precompile += %w( python_lobby.js )
+Rails.application.config.assets.precompile += %w( match.css )
+Rails.application.config.assets.precompile += %w( user_profile.css )
+Rails.application.config.assets.precompile += %w( match.js )
+
+Rails.application.config.assets.precompile += %w( ruby.js )
+Rails.application.config.assets.precompile += %w( java.js )
+Rails.application.config.assets.precompile += %w( javascript.js )
+Rails.application.config.assets.precompile += %w( python.js )
+
+Rails.application.config.assets.precompile += %w( multiplayer_match.js )
+
 %w(users home sessions categories courses).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
 end
