@@ -17,6 +17,10 @@
 //= require jquery.vide
 //= require ace/ace
 //= require ace/worker-html
+//= require ace/mode-ruby
+//= require ace/mode-javascript
+//= require ace/mode-java
+//= require ace/mode-python
 
 //= require jquery.modal.min
 
