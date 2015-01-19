@@ -48,7 +48,7 @@ class ClientEvent
   end
 
   def faye_client
-    @faye_client ||= Faye::Client.new('http://ancient-lowlands-4557.herokuapp.com/faye')
+    @faye_client ||= Faye::Client.new('http://localhost:3000/faye')
   end
 
   def build_hash(lobby_channel)
