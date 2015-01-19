@@ -36,8 +36,27 @@ class User < ActiveRecord::Base
 		user = find_by_username(name)
 		cnt = user.scores.length
 		sum = 0
-		user.scores.each{|x| sum = sum+x.points}
-		sum/cnt
+		user.scores.each{|x| sum = sum+x.wpm}
+		(sum*1.0/cnt*1.0).round()
+	end
+
+	def self.getWl(name)
+		user = find_by_username(name)
+		cnt = user.matches.length
+		sum = user.matches.select{|x| x.winner == user.username}.length
+		(sum*1.0 / cnt*1.0 ) * 100.0
+	end
+
+	def self.getCourses(name)
+		user = find_by_username(name)
+		arr = user.matches.select(:category).uniq
+	end
+
+	def self.getPastWpms(name)
+		user = find_by_username(name)
+		string = ""
+		user.scores.each{|x| string += "#{x.wpm.to_s} " }
+		string
 	end
 
 end

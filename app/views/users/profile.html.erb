@@ -1,5 +1,9 @@
 <%= stylesheet_link_tag "user_profile.css" %>
+<%= javascript_include_tag "profile_chart.js" %>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+<input type="text" id="coursesCompleted" value ="<%= @coursesCompleted %>" hidden></input>
+<input type="text" id="pastWpms" value ="<%= @pastWpms %>" hidden></input>
 
 <div class="panel panel-default" style="width:80%;margin:0 auto">
 	<div class="panel-heading">
@@ -12,36 +16,21 @@
 		    	 <div class="well profile">
 		            <div class="col-sm-12">
 		                <div class="col-xs-12 col-sm-8">
-		                    <h2>Nicole Pearson</h2>
-		                    <p><strong>About: </strong> Web Designer / UI. </p>
-		                    <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
-		                    <p><strong>Skills: </strong>
-		                        <span class="tags">html5</span> 
-		                        <span class="tags">css3</span>
-		                        <span class="tags">jquery</span>
-		                        <span class="tags">bootstrap3</span>
+		                    <h2> <%= @user.username %> </h2>
+		                    <p><strong>Favorite language: </strong> Ruby. </p>
+		                   	
+		                    <p><strong>Courses completed: </strong>
+		                        <% @completed.each do |course| %>
+		                        	<span class="tags"><%= course.category %> </span> 
+		                        <% end %>
 		                    </p>
 		                </div>             
 		                <div class="col-xs-12 col-sm-4 text-center">
 		                    <figure>
 		                        <img src="http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png" alt="" class="img-circle img-responsive">
 		                        <figcaption class="ratings">
-		                            <p>Ratings
-		                            <a href="#">
-		                                <span class="fa fa-star"></span>
-		                            </a>
-		                            <a href="#">
-		                                <span class="fa fa-star"></span>
-		                            </a>
-		                            <a href="#">
-		                                <span class="fa fa-star"></span>
-		                            </a>
-		                            <a href="#">
-		                                <span class="fa fa-star"></span>
-		                            </a>
-		                            <a href="#">
-		                                 <span class="fa fa-star-o"></span>
-		                            </a> 
+		                            <p>
+	
 		                            </p>
 		                        </figcaption>
 		                    </figure>
@@ -49,33 +38,19 @@
 		            </div>            
 		            <div class="col-xs-12 divider text-center">
 		                <div class="col-xs-12 col-sm-4 emphasis">
-		                    <h2><strong> <%= @wpm %> </strong></h2>                    
+		                    <h2><strong> <%= @wpm %> wpm </strong></h2>                    
 		                    <p><small>WPM</small></p>
-		                    <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+		                    <button class="btn btn-success btn-block"><span class="fa fa-user"></span></button>
 		                </div>
 		                <div class="col-xs-12 col-sm-4 emphasis">
 		                    <h2><strong><%= @coursesCompleted %></strong></h2>                    
-		                    <p><small>Courses Completed</small></p>
-		                    <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+		                    <p><small>Courses completed</small></p>
+		                    <button class="btn btn-info btn-block"><span class="fa fa-user"></span></button>
 		                </div>
 		                <div class="col-xs-12 col-sm-4 emphasis">
-		                    <h2><strong>43</strong></h2>                    
+		                    <h2><strong> <%= @wl %> %</strong></h2>                    
 		                    <p><small>W/L %</small></p>
-		                    <div class="btn-group dropup btn-block">
-		                      <button type="button" class="btn btn-primary"><span class="fa fa-gear"></span> Options </button>
-		                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		                        <span class="caret"></span>
-		                        <span class="sr-only">Toggle Dropdown</span>
-		                      </button>
-		                      <ul class="dropdown-menu text-left" role="menu">
-		                        <li><a href="#"><span class="fa fa-envelope pull-right"></span> Send an email </a></li>
-		                        <li><a href="#"><span class="fa fa-list pull-right"></span> Add or remove from a list  </a></li>
-		                        <li class="divider"></li>
-		                        <li><a href="#"><span class="fa fa-warning pull-right"></span>Report this user for spam</a></li>
-		                        <li class="divider"></li>
-		                        <li><a href="#" class="btn disabled" role="button"> Unfollow </a></li>
-		                      </ul>
-		                    </div>
+		                    <button class="btn btn-primary btn-block"><span class="fa fa-user"></span></button>
 		                </div>
 		            </div>
 		    	 </div>                 
@@ -86,8 +61,29 @@
 		<h2 class="panel-title">Performance Chart</h2>
 	</div>
 
+	<div class="row" style="margin:0 auto;">
+			<center><canvas id="myChart" width="800px" height="400px" style="background: linear-gradient(to bottom, #345 0%, #234 100%);margin-top:15px;"></canvas><center>
+	</div>
+	
 	<div class="panel-heading">
 		<h2 class="panel-title">Badges</h2>
 	</div>
+	<div id='wrapper'>
+
+		<% if @wpm >= 50 %>
+  		<div class='cool_btn1 green'>
+				<h1 class='top'>50 <i>WPM</i></h1>
+				<h2>V</h2>
+		</div>
+		<% end %>
+
+		<% if @coursesCompleted >= 20 %>
+		<div class='cool_btn1 teal'>
+				<h1 class='top'>20 <i>Courses</i></h1>
+				<h2>B</h2>
+		</div>
+		<% end %>
+			
+	</div>	
 
 </div>

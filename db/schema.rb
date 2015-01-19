@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119144418) do
+ActiveRecord::Schema.define(version: 20150119163201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,8 +60,13 @@ ActiveRecord::Schema.define(version: 20150119144418) do
     t.string   "key"
   end
 
-  create_table "matches_users", force: true do |t|
+  create_table "matches_users", id: false, force: true do |t|
+    t.integer "match_id"
+    t.integer "user_id"
   end
+
+  add_index "matches_users", ["match_id", "user_id"], name: "index_matches_users_on_match_id_and_user_id", using: :btree
+  add_index "matches_users", ["user_id"], name: "index_matches_users_on_user_id", using: :btree
 
   create_table "scores", force: true do |t|
     t.integer  "points"
@@ -71,6 +76,7 @@ ActiveRecord::Schema.define(version: 20150119144418) do
     t.datetime "updated_at"
     t.integer  "course_id"
     t.integer  "user_id"
+    t.float    "wpm"
   end
 
   create_table "users", force: true do |t|

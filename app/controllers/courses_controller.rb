@@ -22,11 +22,21 @@ class CoursesController < ApplicationController
     category = Category.find_by_name(@category)
     course = category.courses.find_by_id(params[:course])
 
-  	act_score = Score.new(:points => @final_score,:time => @time)
+  	act_score = Score.new(:points => @final_score,:time => @time , :wpm => @wpm)
+
+    winner = user.username
+
+    if @score < @score2 and @user2
+      winner = @user2
+    end
+
+    match = Match.new( :category =>@category,:course => course,:first_player => user.username , :second_player =>@user2 , :winner => winner )
 
   	user.scores << act_score
     course.scores << act_score
+    user.matches << match
 
+    match.save
     act_score.save
   	user.save
     course.save

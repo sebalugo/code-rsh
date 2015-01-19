@@ -22,6 +22,9 @@ class UsersController < ApplicationController
     @user = User.find_by_username(params[:name])
     @wpm = User.getWpm(params[:name])
     @coursesCompleted = @user.scores.length
+    @wl = User.getWl(params[:name])
+    @completed = User.getCourses(params[:name])
+    @pastWpms = User.getPastWpms(params[:name])
   end
 
 end

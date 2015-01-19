@@ -16,6 +16,8 @@ Rails.application.config.assets.precompile += %w( python_lobby.js )
 Rails.application.config.assets.precompile += %w( match.css )
 Rails.application.config.assets.precompile += %w( user_profile.css )
 Rails.application.config.assets.precompile += %w( match.js )
+Rails.application.config.assets.precompile += %w( profile_chart.js )
+
 
 Rails.application.config.assets.precompile += %w( ruby.js )
 Rails.application.config.assets.precompile += %w( java.js )
