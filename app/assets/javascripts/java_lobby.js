@@ -1,5 +1,5 @@
 $(function(){
-	var faye = new Faye.Client('http://localhost:3000/faye');
+	var faye = new Faye.Client('http://ancient-lowlands-4557.herokuapp.com/faye');
 	
 	var subs = faye.subscribe("/lobby/java" , function(data){
 		var message = data["message"].content;
