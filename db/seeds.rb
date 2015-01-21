@@ -11,7 +11,7 @@ Category.create(name: 'js', logo_url: "js_logo.png" , description: "Dynamic comp
 Category.create(name: 'python', logo_url: "js_logo.png" , description: "Widely used general-purpose, high-level programming language.Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in just a few lines.")
 
 categoryR = Category.find_by_name("ruby")
-categoryR.courses.create(name: 'Ruby course #1' ,description:"Ruby simple class example" ,code:"class Fred
+categoryR.courses.create(name: 'Ruby course #1' ,description:"Ruby simple class example" ,code:"class Mabel
   
   def initialize(v)
     @val = v
@@ -24,32 +24,44 @@ categoryR.courses.create(name: 'Ruby course #1' ,description:"Ruby simple class 
   def get
     return @val
   end
+
+  puts 'Mabel es la mejor'
+
 end")
-categoryR.courses.create(name: 'Ruby course #2' ,description:"Ruby simple class example" ,code:"class Box
+categoryR.courses.create(name: 'Ruby course #2' ,description:"Ruby simple class example" ,code:"class Mabel
   
-  def initialize(w,h)
-    @wid = w
-    @hgt = h
-    @fill = ' '
+  def initialize(v)
+    @val = v
   end
 
-  def fill(f)
-    @fill = f
-    return self
+  def set(v)
+    @val = v
   end
 
-  def flip
-    @wid, @hgt = @hgt, @wid
-    return self
+  def get
+    return @val
   end
+
+  puts 'Mabel es la mejor'
+
 end")
-categoryR.courses.create(name: 'Ruby course #3' ,description:"Ruby simple for loop example" ,code:"for y in 1..25
-   number_count = 0
-   for x in 1..1000                  
-      number_count += 1 if x % y == 0
-   end
-   puts 'Yes'
-end ")
+categoryR.courses.create(name: 'Ruby course #3' ,description:"Ruby simple for loop example" ,code:"class Mabel
+  
+  def initialize(v)
+    @val = v
+  end
+
+  def set(v)
+    @val = v
+  end
+
+  def get
+    return @val
+  end
+
+  puts 'Mabel es la mejor'
+
+end")
 categoryJs = Category.find_by_name("js")
 categoryJs.courses.create(name: 'Js course #1' ,description:"Js sample course #1" ,code:'
 function myFunction() {
